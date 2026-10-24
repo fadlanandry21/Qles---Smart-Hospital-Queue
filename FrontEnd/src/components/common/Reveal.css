@@ -1,0 +1,35 @@
+.reveal-wrapper {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.reveal-down {
+  opacity: 0;
+  transform: translateY(-28px);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(32px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(-32px);
+}
+
+.reveal-fade {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+.reveal-wrapper.is-revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}

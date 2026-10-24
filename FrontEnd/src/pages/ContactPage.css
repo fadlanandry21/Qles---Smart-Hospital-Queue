@@ -1,0 +1,226 @@
+.contact-page {
+  background-color: var(--bg);
+}
+
+.contact-info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.contact-info-card {
+  height: 100%;
+}
+
+.contact-info-card.emergency-border {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.info-card-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.info-card-icon-box.danger {
+  background-color: var(--danger-light);
+  color: var(--danger);
+}
+
+.info-card-title {
+  font-size: 16px;
+  font-weight: var(--weight-bold);
+  color: var(--text);
+  margin: 0 0 6px 0;
+}
+
+.info-card-text {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.45;
+  margin: 0 0 4px 0;
+}
+
+.info-card-sub {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Contact Main Layout */
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.contact-form-card {
+  height: 100%;
+}
+
+.form-card-title {
+  font-size: 20px;
+  font-weight: var(--weight-bold);
+  color: var(--text);
+  margin: 0 0 4px 0;
+}
+
+.form-card-sub {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.message-form-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.message-success-feedback {
+  text-align: center;
+  padding: var(--space-6) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.message-success-feedback h3 {
+  font-size: 20px;
+  color: var(--text);
+  margin: 0;
+}
+
+.message-success-feedback p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 10px 0;
+  max-width: 440px;
+}
+
+/* FAQ Accordion */
+.contact-faq-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.faq-section-title {
+  font-size: 20px;
+  font-weight: var(--weight-bold);
+  color: var(--text);
+  margin: 0 0 4px 0;
+}
+
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-item-box {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.faq-item-box.is-open {
+  border-color: var(--primary);
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  font-weight: var(--weight-semibold);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-question-btn:hover {
+  color: var(--primary);
+}
+
+.faq-answer-panel {
+  padding: 0 16px 14px 16px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.faq-answer-panel p {
+  margin: 0;
+}
+
+.quick-chat-box {
+  margin-top: 8px;
+  background-color: var(--surface);
+  border: 1px dashed var(--border);
+}
+
+.quick-chat-body {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+}
+
+.quick-chat-title {
+  font-size: 14px;
+  font-weight: var(--weight-bold);
+  margin: 0;
+  color: var(--text);
+}
+
+.quick-chat-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .contact-info-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-info-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .quick-chat-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

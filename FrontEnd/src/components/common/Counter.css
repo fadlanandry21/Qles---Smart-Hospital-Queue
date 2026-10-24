@@ -1,0 +1,8 @@
+.stat-counter {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-extrabold);
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  display: inline-block;
+}

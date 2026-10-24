@@ -1,0 +1,295 @@
+/* Staggered card animation on page load */
+@keyframes cardFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.queue-card-animate {
+  animation: cardFadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.queue-tracker-page {
+  background-color: var(--bg);
+}
+
+.ticket-tracker-search-section {
+  max-width: 780px;
+  margin: 0 auto var(--space-6);
+}
+
+.tracker-search-card {
+  border: 1px solid var(--border);
+}
+
+.tracker-search-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.search-input-col {
+  flex: 1;
+}
+
+.sample-codes-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.hint-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.hint-code-btn {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11.5px;
+  color: var(--primary);
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.hint-code-btn:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+}
+
+/* Search result display */
+.search-result-display {
+  margin-bottom: var(--space-6);
+}
+
+.patient-active-status-card {
+  background-color: var(--surface);
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  padding: var(--space-4);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.active-status-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.status-badge-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-badge-title h3 {
+  font-size: 18px;
+  color: var(--text);
+  margin: 0;
+}
+
+.active-ticket-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  background-color: var(--bg);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.ticket-stat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-box-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: var(--weight-medium);
+}
+
+.stat-box-value {
+  font-size: 20px;
+  color: var(--text);
+  font-weight: var(--weight-bold);
+}
+
+.stat-box-value.primary {
+  font-size: 28px;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+.stat-box-value.accent {
+  color: #b45309;
+}
+
+[data-theme="dark"] .stat-box-value.accent {
+  color: #fbbf24;
+}
+
+.stat-box-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.ticket-not-found-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--danger-light);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: var(--text);
+}
+
+.ticket-not-found-banner strong {
+  display: block;
+  font-size: 14px;
+  color: var(--danger);
+}
+
+.ticket-not-found-banner p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Counters section */
+.counters-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.counters-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counters-title {
+  font-size: 22px;
+  font-weight: var(--weight-bold);
+  color: var(--text);
+  margin: 0;
+}
+
+.counters-live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: var(--weight-semibold);
+  color: var(--success);
+  background-color: var(--success-light);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.counters-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  align-items: stretch;
+}
+
+.spin-anim {
+  animation: spin 0.6s linear;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Bottom CTA */
+.queue-page-bottom-cta {
+  margin-top: var(--space-6);
+}
+
+.cta-highlight-card {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+  color: #FFFFFF;
+}
+
+.cta-highlight-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.cta-highlight-info h3 {
+  font-size: 20px;
+  font-weight: var(--weight-bold);
+  color: #FFFFFF !important;
+  margin: 0 0 4px 0;
+}
+
+.cta-highlight-info p {
+  font-size: 14px;
+  color: #E2E8F0 !important;
+  opacity: 0.95;
+  margin: 0;
+}
+
+.cta-highlight-body .btn {
+  background-color: #FFFFFF;
+  color: var(--primary);
+  border: none;
+}
+
+.cta-highlight-body .btn:hover {
+  background-color: #f1f5f9;
+}
+
+@media (max-width: 1024px) {
+  .counters-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tracker-search-form {
+    flex-direction: column;
+  }
+  .active-ticket-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .counters-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-highlight-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
