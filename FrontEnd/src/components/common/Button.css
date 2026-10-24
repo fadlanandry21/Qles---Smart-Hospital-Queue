@@ -40,30 +40,53 @@
 
 /* Variants */
 /* Solid primary button */
-.btn-primary {
+.btn-primary,
+a.btn-primary {
   background-color: var(--primary);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
 }
 
-.btn-primary:hover:not(:disabled) {
+.btn-primary:hover:not(:disabled),
+.btn-primary:focus-visible,
+a.btn-primary:hover,
+a.btn-primary:focus,
+a.btn-primary:active {
   background-color: var(--primary-hover);
+  color: #FFFFFF !important;
   box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
   transform: translateY(-1px);
 }
 
-.btn-primary:active:not(:disabled) {
+.btn-primary:active:not(:disabled),
+a.btn-primary:active {
+  background-color: var(--primary-hover);
+  color: #FFFFFF !important;
   transform: translateY(0);
 }
 
+/* Ensure text label and icons inside primary button always remain white */
+.btn-primary .btn-label,
+.btn-primary .btn-icon,
+.btn-primary:hover .btn-label,
+.btn-primary:hover .btn-icon,
+a.btn-primary .btn-label,
+a.btn-primary .btn-icon,
+a.btn-primary:hover .btn-label,
+a.btn-primary:hover .btn-icon {
+  color: #FFFFFF !important;
+}
+
 /* Outlined secondary button */
-.btn-secondary {
+.btn-secondary,
+a.btn-secondary {
   background-color: transparent;
   border-color: var(--border);
   color: var(--text);
 }
 
-.btn-secondary:hover:not(:disabled) {
+.btn-secondary:hover:not(:disabled),
+a.btn-secondary:hover {
   background-color: var(--surface);
   border-color: var(--primary);
   color: var(--primary);
@@ -72,37 +95,67 @@
 }
 
 /* Accent button */
-.btn-accent {
+.btn-accent,
+a.btn-accent {
   background-color: var(--accent);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   box-shadow: 0 2px 6px rgba(245, 158, 11, 0.25);
 }
 
-.btn-accent:hover:not(:disabled) {
+.btn-accent:hover:not(:disabled),
+a.btn-accent:hover {
   background-color: #d97706;
+  color: #FFFFFF !important;
   transform: translateY(-1px);
 }
 
+.btn-accent .btn-label,
+.btn-accent .btn-icon,
+.btn-accent:hover .btn-label,
+.btn-accent:hover .btn-icon,
+a.btn-accent .btn-label,
+a.btn-accent .btn-icon,
+a.btn-accent:hover .btn-label,
+a.btn-accent:hover .btn-icon {
+  color: #FFFFFF !important;
+}
+
 /* Ghost button */
-.btn-ghost {
+.btn-ghost,
+a.btn-ghost {
   background-color: transparent;
   color: var(--text);
   border-color: transparent;
 }
 
-.btn-ghost:hover:not(:disabled) {
+.btn-ghost:hover:not(:disabled),
+a.btn-ghost:hover {
   background-color: var(--primary-light);
   color: var(--primary);
 }
 
 /* Danger button */
-.btn-danger {
+.btn-danger,
+a.btn-danger {
   background-color: var(--danger);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
-.btn-danger:hover:not(:disabled) {
+.btn-danger:hover:not(:disabled),
+a.btn-danger:hover {
   background-color: #dc2626;
+  color: #FFFFFF !important;
+}
+
+.btn-danger .btn-label,
+.btn-danger .btn-icon,
+.btn-danger:hover .btn-label,
+.btn-danger:hover .btn-icon,
+a.btn-danger .btn-label,
+a.btn-danger .btn-icon,
+a.btn-danger:hover .btn-label,
+a.btn-danger:hover .btn-icon {
+  color: #FFFFFF !important;
 }
 
 /* Disabled & Loading */

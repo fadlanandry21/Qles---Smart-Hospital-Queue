@@ -573,7 +573,7 @@
   transition: all var(--transition-fast);
 }
 
-.admin-tab-btn:hover {
+.admin-tab-btn:hover:not(.active) {
   border-color: var(--primary);
   color: var(--primary);
 }
@@ -581,9 +581,13 @@
 .admin-tab-btn.active {
   background-color: var(--primary);
   border-color: var(--primary);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: var(--weight-semibold);
   box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+.admin-tab-btn.active:hover {
+  color: #FFFFFF !important;
 }
 
 .admin-tab-btn.tab-pending.active {

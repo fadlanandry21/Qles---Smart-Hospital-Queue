@@ -54,7 +54,7 @@ a {
   transition: color var(--transition-fast);
 }
 
-a:hover {
+a:hover:not(.btn):not([class*="btn-"]) {
   color: var(--primary-hover);
 }
 

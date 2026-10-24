@@ -89,7 +89,7 @@
   outline: none;
 }
 
-.time-slot-btn:hover:not(:disabled) {
+.time-slot-btn:hover:not(:disabled):not(.is-selected) {
   border-color: var(--primary);
   background-color: var(--primary-light);
   transform: translateY(-1px);
@@ -135,9 +135,17 @@
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
+.time-slot-btn.is-selected:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
 .time-slot-btn.is-selected .slot-time,
-.time-slot-btn.is-selected .slot-status {
-  color: #FFFFFF;
+.time-slot-btn.is-selected .slot-status,
+.time-slot-btn.is-selected:hover .slot-time,
+.time-slot-btn.is-selected:hover .slot-status {
+  color: #FFFFFF !important;
 }
 
 .slot-selected-indicator {
